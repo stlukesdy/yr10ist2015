@@ -4,5 +4,9 @@ var app = express();
 
 app.use( express.static( __dirname + '/public' ) );
 
-//app.listen(process.env.PORT, process.env.IP);
-app.listen(3000);
+if (process !== null){
+  console.log('Your code is running at https://' + process.env.C9_HOSTNAME);
+  app.listen(process.env.PORT, process.env.IP);  
+}else{
+  app.listen(3000);  
+}
