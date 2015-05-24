@@ -8,20 +8,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "yr10ist2015", "http://local
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_7138"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\Development\quobject.visualstudio.com\yr10ist2015\"
+		Debug.AspNetCompiler.PhysicalPath = "..\yr10ist2015\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7138\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_7138"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\Development\quobject.visualstudio.com\yr10ist2015\"
+		Release.AspNetCompiler.PhysicalPath = "..\yr10ist2015\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7138\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\..\..\..\Development\quobject.visualstudio.com\yr10ist2015\"
+		SlnRelativePath = "..\yr10ist2015\"
 	EndProjectSection
 EndProject
 Global
