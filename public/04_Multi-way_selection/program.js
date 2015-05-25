@@ -1,19 +1,24 @@
 ﻿$(document).ready(function () {
-  $("#runbutton").click(program);
+  $("#runButton").click(program);
 });
 
 var program = function() {
 
+  var signal = 'red';
 
-  var myGuess = 42;
+  switch (signal) {
+    case 'red':
+      console.log("stop");
+      break;
+    case 'amber':
+      console.log("stop");
+      break;
+    case 'green':
+      console.log("proceed through intersection");
+      break;
 
-  var guess = $("#guess").val();
-  guess = parseInt(guess);
-
-  if (guess === myGuess) {
-    console.log("Well done - you guessed my number!");
-  } else {
-    console.log("That is not correct.");
+    default:
+      console.log("proceed with caution");
   }
 
 };

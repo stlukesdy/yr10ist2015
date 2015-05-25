@@ -10,23 +10,67 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8">
-                <h3>04 Multi-way selection</h3>
-            </div>
-            <div class="col-sm-4">
-                <img class="pull-right" src="images/javascript.jpg" alt="javascript" height="40"/>
-            </div>
-        </div>
-        <div class="row">
-            <p>Open this document in Chrome and open the developer tools Windows: F12 or Ctrl-shift+I, Mac: Cmd + Opt + I.</p>
-            <p>Click run button.</p>
-            <button id="runbutton" type="button" class="btn btn-primary">Run</button>
-            <p>Observe the console output.</p>
-            <p>Modify <code>program.js</code> to multiply 34 with 42</p>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3>04 Multi-way selection</h3>
+      </div>
+      <div class="col-sm-4">
+        <img class="pull-right" src="images/javascript.jpg" alt="javascript" height="40" />
+      </div>
     </div>
+    <div class="row">
+      <p>Multi-way selection allows for any number of possible choices, or cases. The path taken is determined by the evaluation of the expression. Multi-way selection is often referred to as a case structure.</p>
+      <h3>Problem</h3>
+      <p>Write a set of instructions that describes how to respond to all possible signals at a set of traffic control lights.</p>
+      <h3>Pseudocode</h3>
+      <pre>
+signal = 'red'
+
+CASEWHERE signal is
+  red : Display "stop"
+  amber : Display "stop"
+  green : Display "proceed through intersection"
+  OTHERWISE : Display "proceed with caution"
+ENDCASE
+</pre>
+      <h3>Javascript</h3>
+<pre>
+var signal = 'red';
+
+switch (signal) {
+  case 'red':
+    console.log("stop");
+    break;
+  case 'amber':
+    console.log("stop");
+    break;
+  case 'green':
+    console.log("proceed through intersection");
+    break;
+  default:
+    console.log("proceed with caution");
+}
+
+</pre>
+
+      <h3>Flowchart</h3>
+      <img src="images/multiway.png" height="500" />
+
+    </div>
+
+    <div class="row">
+      <p>Open this document in Chrome and open the developer tools Windows: F12 or Ctrl-shift+I, Mac: Cmd + Opt + I.</p>
+      <p>Click run button.</p>
+      <button id="runButton" type="button" class="btn btn-primary">Run</button>
+      <p>Observe the console output.</p>
+      <h3>Your task</h3>
+        <p>Write a set of instructions that translates a dice integer into the corresponding word.
+            Modify <code>program.js</code>: set a variable dice to an integer e.g. 1 and then use a multiway selection to display the word e.g. "one". If the integer is not between 1 and 6 display "invalid dice value".
+        </p>
+    </div>
+  </div>
+
 
 </body>
 </html>
