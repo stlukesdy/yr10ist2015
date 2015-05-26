@@ -2,7 +2,7 @@
 
 ## Installation steps
 
-1. logon to c9.io
+1. logon to [c9.io](https://c9.io)
 2. Press green button `CREATE NEW WORKSPACE`<br />
 ![Create new workspce](public/images/001.jpeg)
 3. Select `Clone From URL`<br />
