@@ -2,7 +2,7 @@
 
 ## Installation steps
 
-1. logon to [c9.io](https://c9.io)
+1. logon to <a href="https://c9.io" target="_blank">c9.io</a>
 2. Press green button `CREATE NEW WORKSPACE`<br />
 ![Create new workspce](public/images/001.jpeg)
 3. Select `Clone From URL`<br />
@@ -13,11 +13,11 @@
 ```
 ![Create new workspce](public/images/003.jpeg)<br />
 
-  ---Select Workspace Privacy: **Open and Discoverable**<br />
-  ---Select **Custom**<br />
-  ---Click **Create**<br />
+  - Select Workspace Privacy: **Open and Discoverable**<br />
+  - Select **Custom**<br />
+  - Click **Create**<br />
 
-4. Select the new workspace "yr10ist2015".
+4. Select the new workspace `yr10ist2015`.
 5. Click **START EDITING**. Wait until loaded.
 6. In your bash shell type the following command:<br /><br />
 ```
