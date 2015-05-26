@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>10 Show image</title>
+  <title>12 Timer</title>
   <link rel="stylesheet" href="../third_party/bootstrap.min.css">
   <script src="../third_party/jquery.min.js"></script>
   <script src="../third_party/bootstrap.min.js"></script>
@@ -13,7 +13,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
-        <h3>10 Show image</h3>
+        <h3>12 Timer</h3>
       </div>
       <div class="col-sm-4">
         <img class="pull-right" src="images/javascript.jpg" alt="javascript" height="40" />
@@ -22,25 +22,41 @@
     <div class="row">
 
       <h3>Problem</h3>
-      <p>Show an image with javascript.</p>
+      <p>Show a countdown timer.</p>
 
       <h3>Javascript</h3>
 <pre>
-var r = Math.floor((Math.random() * 2) + 1);
-console.log(r);
+$(document).ready(function () {
+  var display = $(&#39;#outputP&#39;);
+  var fiveMinutes = 60 * 5;
+  startTimer(fiveMinutes, display);
+});
+
+// from http://stackoverflow.com/a/20618517/1109316
+function startTimer(duration, display) {
+  var timer = duration, minutes, seconds;
+  setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+    minutes = minutes &lt; 10 ? &quot;0&quot; + minutes : minutes;
+    seconds = seconds &lt; 10 ? &quot;0&quot; + seconds : seconds;
+    display.text(minutes + &quot;:&quot; + seconds);
+    console.log(timer);
+    if (--timer &lt; 0) {
+      timer = duration;
+    }
+  }, 1000);
+}
 </pre>
 
     </div>
 
     <div class="row">
-      <p>Open this document in Chrome and open the developer tools Windows: F12 or Ctrl-shift+I, Mac: Cmd + Opt + I.</p>
-      <p>Click run button.</p>
-      <button id="runButton" type="button" class="btn btn-primary">Run</button>
-      <img id="diceImg" src="images/1.jpg" alt="dice" />
+      <p id="outputP"></p>
       <h3>Your task</h3>
       <p>
 
-        Modify <code>program.js</code>: Select random images of a dice with 1 - 6 dots.
+        Modify <code>program.js</code>: Change the start time of the timer.
       </p>
     </div>
   </div>

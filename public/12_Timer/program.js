@@ -1,10 +1,26 @@
 ﻿$(document).ready(function () {
-  $("#runButton").click(program);
+  var display = $('#outputP');
+  var fiveMinutes = 60 * 5;
+  startTimer(fiveMinutes, display);
 });
 
-var program = function() {
-  var r = Math.floor((Math.random() * 2) + 1);
-  var fileName = './images/' + r + '.jpg';
-  console.log(fileName);
-  $('#diceImg').attr("src", fileName);
-};
+
+
+
+// from http://stackoverflow.com/a/20618517/1109316
+function startTimer(duration, display) {
+  var timer = duration, minutes, seconds;
+  setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.text(minutes + ":" + seconds);
+    console.log(timer);
+    if (--timer < 0) {
+      timer = duration;
+    }
+  }, 1000);
+}
