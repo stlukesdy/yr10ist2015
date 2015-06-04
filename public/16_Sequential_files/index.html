@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>16 Sequential files</title>
+  <link rel="stylesheet" href="../third_party/bootstrap.min.css">
+  <script src="../third_party/jquery.min.js"></script>
+  <script src="../third_party/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="program.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3>16 Sequential files</h3>
+      </div>
+      <div class="col-sm-4">
+        <img class="pull-right" src="images/javascript.jpg" alt="javascript" height="40" />
+      </div>
+    </div>
+
+    <div class="row">
+      <h3>Creating a file</h3>
+      <p>Sequential files need to be opened for output when they are created and must be closed before the program ends.</p>
+      <h3>Printing the contents of a file</h3>
+      <p>Sequential files that already exist need to be opened for input before they can be read, and closed before the program ends.</p>
+
+      <h3>Problem</h3>
+      <p>Create a file and write to it. Open the file and read from it.</p>
+      <h3>Pseudocode</h3>
+      <pre>
+productArray(1).id = 1
+productArray(1).name = "Oven cleaner kit"
+
+productArray(2).id = 2
+productArray(2).name = "Dishwasher tablets"
+
+#
+# Creating a file
+#
+Open ProductData for output
+
+FOR i = 1 to 2 STEP 1
+  Write ProductData from productArray(i).id, productArray(i).name
+NEXT i
+
+Write ProductData from "xxx", "xxx"
+
+Close ProductData
+
+#
+# Printing the contents of a file
+#
+Open ProductData2 for input
+
+Read id, name from ProductData2
+
+WHILE id <> "xxx"
+  Display id, name
+  Read id, name from ProductData2
+END WHILE
+
+Close ProductData2
+
+</pre>
+        <h3>Javascript</h3>
+<pre>
+$(document).ready(function () {
+  $("#writeButton").click(writeProgram);
+  $("#readButton").click(readProgram);
+});
+
+var writeProgram = function () {
+
+  var productArray = [];
+
+  productArray[0] = {};
+  productArray[0].id = 1;
+  productArray[0].name = 'Oven cleaner kit';
+
+  productArray[1] = {};
+  productArray[1].id = 2;
+  productArray[1].name = 'Dishwasher tablets';
+
+  var productData = [];
+
+  for (var i = 0; i < 2; i = i + 1) {
+    productData.push(productArray[i]);
+  }
+
+  localStorage.setItem('productData', JSON.stringify(productData));
+
+};
+
+var readProgram = function () {
+
+  var producData2 = JSON.parse(localStorage.getItem('productData'));
+
+  for (var i = 0; i < producData2.length; i = i + 1) {
+    console.log(producData2[i].id + " " + producData2[i].name);
+  }
+
+};
+
+</pre>
+
+    </div>
+
+    <div class="row">
+      <p>Open this document in Chrome and open the developer tools Windows: F12 or Ctrl-shift+I, Mac: Cmd + Opt + I.</p>
+      <p>Click Write and Read buttons.</p>
+      <button id="writeButton" type="button" class="btn btn-primary">Write</button>
+      <button id="readButton" type="button" class="btn btn-primary">Read</button>
+        <p>Observe the console output and the Resources --> Local Storage.</p>
+
+      <img src="images/chromedevtools.jpeg" />
+        <h3>Your task</h3>
+      <p>
+
+        Modify <code>program.js</code>: Add the quantity attribute to the stored data.
+      </p>
+    </div>
+
+
+  </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

@@ -31,3 +31,14 @@ grunt
 8. Open in chrome `https://yr10ist2015-{your username}.c9.io/`
 9. Find the code files in cloud 9 file explorer:<br />
 ![Create new workspce](public/images/004.jpeg)
+
+
+## Update steps
+
+
+1. logon to <a href="https://c9.io" target="_blank">c9.io</a>
+2. Select the new workspace `yr10ist2015`.
+3. Click **START EDITING**. Wait until loaded.
+4. Open new Terminal Alt-T (Window --> New Terminal).
+5. In your new terminal bash shell type the following command:`git pull`
+6. Close the new Terminal created in step 4.

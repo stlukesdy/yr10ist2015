@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>15 Array of Records</title>
+  <link rel="stylesheet" href="../third_party/bootstrap.min.css">
+  <script src="../third_party/jquery.min.js"></script>
+  <script src="../third_party/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="program.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3>15 Array of Records</h3>
+      </div>
+      <div class="col-sm-4">
+        <img class="pull-right" src="images/javascript.jpg" alt="javascript" height="40" />
+      </div>
+    </div>
+    <div class="row">
+      <p>An array of records is an array, each element of which consists of a single record. The fields in that record may be of different data types.</p>
+      <p>Every record in the array must have the same structure, that is the same component fields in the same order.</p>
+      <h3>Problem</h3>
+      <p>Create a array of product records that contains id, name, description, quantity and price. Print the name and price of every product.</p>
+      <h3>Pseudocode</h3>
+
+      <pre>
+productArray(1).id = 1
+productArray(1).name = "Oven cleaner kit"
+productArray(1).description = "The ultimate solution for ovens, trays and racks"
+productArray(1).quantity = 10
+productArray(1).price = 5.99
+
+productArray(2).id = 2
+productArray(2).name = "Dishwasher tablets"
+productArray(2).description = "With built-in rinse aid action"
+productArray(2).quantity = 20
+productArray(2).price = 8.99
+
+
+FOR i = 1 to 2 STEP 1
+  Display "name = "; productArray(i).name; " price = "; productArray(i).price
+NEXT i
+</pre>
+      <h3>Javascript</h3>
+<pre>
+var productArray = [];
+
+productArray[0] = {};
+productArray[0].id = 1;
+productArray[0].name = 'Oven cleaner kit';
+productArray[0].description = 'The ultimate solution for ovens, trays and racks';
+productArray[0].quantity = 10;
+productArray[0].price = 5.99;
+
+productArray[1] = {};
+productArray[1].id = 2;
+productArray[1].name = 'Dishwasher tablets';
+productArray[1].description = 'With built-in rinse aid action';
+productArray[1].quantity = 20;
+productArray[1].price = 8.99;
+
+for (var i = 0; i < 2; i = i + 1) {
+  console.log("name = " + productArray[i].name + " price = " + productArray[i].price);
+}
+
+</pre>
+
+
+
+    </div>
+
+    <div class="row">
+      <p>Open this document in Chrome and open the developer tools Windows: F12 or Ctrl-shift+I, Mac: Cmd + Opt + I.</p>
+      <p>Click run button.</p>
+      <button id="runButton" type="button" class="btn btn-primary">Run</button>
+      <p>Observe the console output.</p>
+      <h3>Your task</h3>
+      <p>
+
+        Modify <code>program.js</code>: Add a third product and include the description in the print out.
+      </p>
+    </div>
+  </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
