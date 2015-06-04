@@ -1,13 +1,17 @@
 ﻿$(document).ready(function () {
-  $("#runButton").click(program);
+  $("#runActivity1Button").click(activity1function);
+  $("#runActivity2Button").click(activity2function);
+  $("#runActivity3Button").click(activity3function);
 });
 
-var program = function () {
-  console.log("Hello world");
-  console.log(5 + 6);
+var activity1function = function () {
+  console.log("Please complete activity 1 by modifying the code in program.js");
+};
 
-  var number1 = 5;
-  var number2 = 6;
-  var result = number1 + number2;
-  console.log("The result is " + result);
+var activity2function = function () {
+  console.log("Please complete activity 2 by modifying the code in program.js");
+};
+
+var activity3function = function () {
+  console.log("Please complete activity 3 by modifying the code in program.js");
 };
